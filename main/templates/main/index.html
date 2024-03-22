@@ -1,0 +1,44 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block body %}
+<body class="hold-transition sidebar-mini">
+<div class="wrapper">
+
+  {% include 'main/navbar.html' %}
+
+  {% include 'main/sidebar.html' %}
+
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <div class="content-header">
+    </div>
+    <!-- /.content-header -->
+
+    <!-- Main content -->
+    <div class="content">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="card card-dark">
+              <div class="card-header">
+                <h5 class="m-0">Dashboard</h5>
+              </div>
+              <div class="card-body">
+                <p class="card-text">Dashboard content will be in this page.</p>
+              </div>
+            </div><!-- /.card -->
+          </div>
+        </div>
+        <!-- /.row -->
+      </div><!-- /.container-fluid -->
+    </div>
+    <!-- /.content -->
+  </div>
+  <!-- /.content-wrapper -->
+
+  {% include 'main/footer.html' %}
+  <!-- ./wrapper -->
+  
+{% endblock body %}

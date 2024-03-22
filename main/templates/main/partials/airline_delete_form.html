@@ -1,0 +1,12 @@
+<div class="modal-content">
+    <div class="modal-header"><h4>Airline Delete Confirmation</h4></div>
+    <div class="modal-body">
+        <p>Are You Sure to Delete the Airline with ID: {{ recordid }}</p>
+    </div>
+    <form action="{{ request.path }}" method="POST" class="modal-footer">
+        {% csrf_token %}
+        <input type="hidden" name="recordid" value="{{ recordid }}" />
+            <button type="button" class="btn btn-secondary" data-toogle="modal" data-target="#modal" data-bs-dismiss="modal">Cancel</button>
+    <button type="submit" class="btn btn-danger">Delete</button>
+    </form>
+</div>

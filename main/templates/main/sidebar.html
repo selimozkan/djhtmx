@@ -1,0 +1,97 @@
+{% load static %}
+
+<!-- Main Sidebar Container -->
+  <aside class="main-sidebar sidebar-dark-primary elevation-4">
+    <!-- Brand Logo -->
+    <a href="{% url 'home' %}" class="brand-link">
+      <img src="{% static 'logo-sm.png' %}" alt="LuviaCure Logo" class="brand-image img-circle elevation-3" style="opacity: 1">
+      <span class="brand-text font-weight-light">LuviaCure Portal</span>
+    </a>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <!-- Sidebar user panel (optional) -->
+      <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+        <div class="image">
+          <img src="{% static 'dist/img/user2-160x160.jpg' %}" class="img-circle elevation-2" alt="User Image">
+        </div>
+        <div class="info">
+          <a href="#" class="d-block">Alexander Pierce</a>
+        </div>
+      </div>
+
+      <!-- Sidebar Menu -->
+      <nav class="mt-2">
+        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+          <!-- Add icons to the links using the .nav-icon class with font-awesome or any other icon font library -->
+          <li class="nav-item menu-open">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-plus fa-2xs"></i>
+              <p>
+                Operations
+                <i class="right fas fa-angle-left"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="fas fa-sticky-note nav-icon"></i>
+                  <p>Request</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="fas fa-person-running nav-icon"></i>
+                  <p>Actions</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item menu-open">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-plus"></i>
+              <p>
+                Constants
+                <i class="right fas fa-angle-left"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="fas fa-hospital nav-icon"></i>
+                  <p>Hospitals</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="fas fa-user-doctor nav-icon"></i>
+                  <p>Doctors</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="{% url 'airlines' %}" class="nav-link">
+                  <i class="fas fa-plane nav-icon"></i>
+                  <p>Airlines</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <!--
+                <a href="{% url 'logout' %}" class="nav-link">
+                  <i class="fas fa-closene nav-icon"></i>
+                  <p>Log Out</p>
+                </a>
+                -->
+                <form id="logout-form" method="post" action="{% url 'logout' %}">
+                  {% csrf_token %}
+                  <button type="submit" class="nav-link text-left" style="background:none;border:none;color:crimson;"><i class="fas fa-power-off nav-icon"></i>Log out</button>
+                </form>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <!-- /.sidebar-menu -->
+    </div>
+    <!-- /.sidebar -->
+  </aside>
+  <!-- Main Sidebar Container -->

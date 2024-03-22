@@ -1,0 +1,8 @@
+.action-buttons {
+  cursor: pointer;
+}
+
+.modal-backdrop {
+  background-color: black !important;
+  opacity: 0.8 !important;
+}
